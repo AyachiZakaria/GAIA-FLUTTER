@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
-import 'package:flutter_web_dashboard/helpers/reponsiveness.dart';
+import 'package:quiz_backoffice/constants/style.dart';
+import 'package:quiz_backoffice/helpers/reponsiveness.dart';
 
 import 'custom_text.dart';
 
@@ -26,28 +26,37 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
       title: Row(
         children: [
           Visibility(
-              visible: !ResponsiveWidget.isSmallScreen(context),
-              child: const CustomText(
-                text: "Dash",
-                color: lightGrey,
-                size: 20,
-                weight: FontWeight.bold,
-              )),
+            visible: !ResponsiveWidget.isSmallScreen(context),
+            child: const CustomText(
+              text: "EarthWise Dashboard",
+              color: lightGrey,
+              size: 20,
+              weight: FontWeight.bold,
+            ),
+          ),
           Expanded(child: Container()),
           IconButton(
-              icon: const Icon(
-                Icons.settings,
-                color: dark,
-              ),
-              onPressed: () {}),
+            icon: const Icon(
+              Icons.settings,
+              color: dark,
+            ),
+            onPressed: () {
+              // Handle settings button press
+              // You can show a dialog or navigate to the settings page
+            },
+          ),
           Stack(
             children: [
               IconButton(
-                  icon: Icon(
-                    Icons.notifications,
-                    color: dark.withOpacity(.7),
-                  ),
-                  onPressed: () {}),
+                icon: Icon(
+                  Icons.notifications,
+                  color: dark.withOpacity(.7),
+                ),
+                onPressed: () {
+                  // Handle notifications button press
+                  // You can show a notifications panel or navigate to notifications
+                },
+              ),
               Positioned(
                 top: 7,
                 right: 7,
@@ -56,11 +65,12 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
                   height: 12,
                   padding: const EdgeInsets.all(4),
                   decoration: BoxDecoration(
-                      color: active,
-                      borderRadius: BorderRadius.circular(30),
-                      border: Border.all(color: light, width: 2)),
+                    color: active,
+                    borderRadius: BorderRadius.circular(30),
+                    border: Border.all(color: light, width: 2),
+                  ),
                 ),
-              )
+              ),
             ],
           ),
           Container(
@@ -78,27 +88,45 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
           const SizedBox(
             width: 16,
           ),
-          Container(
-            decoration: BoxDecoration(
-                color: active.withOpacity(.5),
-                borderRadius: BorderRadius.circular(30)),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(30)),
-              padding: const EdgeInsets.all(2),
-              margin: const EdgeInsets.all(2),
-              child: const CircleAvatar(
-                backgroundColor: light,
-                child: Icon(
-                  Icons.person_outline,
-                  color: dark,
-                ),
+          InkWell(
+            onTap: () {
+              // Handle image click, e.g., show profile settings menu
+              print('Image Clicked');
+              showProfileMenu(context);
+            },
+            child: ClipOval(
+              child: Image.asset(
+                'assets/images/profile.jpg',
+                width: 40, // Adjust the width as needed
+                height: 40, // Adjust the height as needed
+                fit: BoxFit.cover,
               ),
             ),
-          )
+          ),
         ],
       ),
       iconTheme: const IconThemeData(color: dark),
       elevation: 0,
-      backgroundColor: Colors.transparent,
+      backgroundColor: const Color.fromARGB(0, 0, 0, 0),
     );
+
+void showProfileMenu(BuildContext context) {
+  showMenu(
+    context: context,
+    position: RelativeRect.fromLTRB(100, 100, 0, 0),
+    items: [
+      PopupMenuItem(
+        child: ListTile(
+          leading: Icon(Icons.person),
+          title: Text('Profile'),
+        ),
+      ),
+      PopupMenuItem(
+        child: ListTile(
+          leading: Icon(Icons.settings),
+          title: Text('Settings'),
+        ),
+      ),
+    ],
+  );
+}

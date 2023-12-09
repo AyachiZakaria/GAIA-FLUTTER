@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:flutter_web_dashboard/model/quiz.dart';
+import 'package:quiz_backoffice/model/quiz.dart';
 
 // Fetch quiz data
 Future<List<Quiz>> fetchQuizzes() async {

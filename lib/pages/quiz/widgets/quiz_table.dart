@@ -1,8 +1,8 @@
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
-import 'package:flutter_web_dashboard/widgets/custom_text.dart';
-import 'package:flutter_web_dashboard/model/quiz.dart';
+import 'package:quiz_backoffice/constants/style.dart';
+import 'package:quiz_backoffice/widgets/custom_text.dart';
+import 'package:quiz_backoffice/model/quiz.dart';
 
 /// Example without datasource
 class QuizTable extends StatelessWidget {
@@ -31,11 +31,11 @@ class QuizTable extends StatelessWidget {
             minWidth: 600,
             columns: const [
               DataColumn2(
-                label: Text("Name"),
+                label: Text("Question"),
                 size: ColumnSize.L,
               ),
               DataColumn(
-                label: Text('Location'),
+                label: Text('Answer'),
               ),
               DataColumn(
                 label: Text('Rating'),

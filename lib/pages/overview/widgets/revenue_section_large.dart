@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
-import 'package:flutter_web_dashboard/pages/overview/widgets/bar_chart.dart';
-import 'package:flutter_web_dashboard/pages/overview/widgets/revenue_info.dart';
-import 'package:flutter_web_dashboard/widgets/custom_text.dart';
+import 'package:quiz_backoffice/constants/style.dart';
+import 'package:quiz_backoffice/pages/overview/widgets/bar_chart.dart';
+import 'package:quiz_backoffice/pages/overview/widgets/revenue_info.dart';
+import 'package:quiz_backoffice/widgets/custom_text.dart';
 
 class RevenueSectionLarge extends StatelessWidget {
   const RevenueSectionLarge({super.key});
@@ -31,7 +31,7 @@ class RevenueSectionLarge extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           const CustomText(
-                            text: "Revenue Chart",
+                            text: "Quiz Chart",
                             size: 20,
                             weight: FontWeight.bold,
                             color: lightGrey,
@@ -55,11 +55,11 @@ class RevenueSectionLarge extends StatelessWidget {
                           Row(
                             children: [
                               RevenueInfo(
-                                title: "Toda's revenue",
+                                title: "Quiz Completed",
                                 amount: "230",
                               ),
                               RevenueInfo(
-                                title: "Last 7 days",
+                                title: "Quiz Not Completed",
                                 amount: "1,100",
                               ),
                             ],
@@ -68,11 +68,11 @@ class RevenueSectionLarge extends StatelessWidget {
                           Row(
                             children: [
                               RevenueInfo(
-                                title: "Last 30 days",
+                                title: "Quiz above 50% success",
                                 amount: "3,230",
                               ),
                               RevenueInfo(
-                                title: "Last 12 months",
+                                title: "Quiz bellow 50% success",
                                 amount: "11,300",
                               ),
                             ],

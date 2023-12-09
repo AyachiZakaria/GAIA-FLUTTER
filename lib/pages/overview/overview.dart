@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/helpers/reponsiveness.dart';
-import 'package:flutter_web_dashboard/constants/controllers.dart';
-import 'package:flutter_web_dashboard/pages/overview/widgets/available_drivers_table.dart';
-import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_large.dart';
-import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_medium.dart';
-import 'package:flutter_web_dashboard/pages/overview/widgets/overview_cards_small.dart';
-import 'package:flutter_web_dashboard/pages/overview/widgets/revenue_section_large.dart';
-import 'package:flutter_web_dashboard/widgets/custom_text.dart';
+import 'package:quiz_backoffice/helpers/reponsiveness.dart';
+import 'package:quiz_backoffice/constants/controllers.dart';
+import 'package:quiz_backoffice/pages/overview/widgets/available_drivers_table.dart';
+import 'package:quiz_backoffice/pages/overview/widgets/overview_cards_large.dart';
+import 'package:quiz_backoffice/pages/overview/widgets/overview_cards_medium.dart';
+import 'package:quiz_backoffice/pages/overview/widgets/overview_cards_small.dart';
+import 'package:quiz_backoffice/pages/overview/widgets/revenue_section_large.dart';
+import 'package:quiz_backoffice/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
 import 'widgets/revenue_section_small.dart';
@@ -38,8 +38,9 @@ class OverviewPage extends StatelessWidget {
                 if (ResponsiveWidget.isCustomSize(context)) const OverviewCardsMediumScreen() else const OverviewCardsLargeScreen()
               else
                 const OverviewCardsSmallScreen(),
-              if (!ResponsiveWidget.isSmallScreen(context)) const RevenueSectionLarge() else const RevenueSectionSmall(),
               const AvailableDriversTable(),
+              if (!ResponsiveWidget.isSmallScreen(context)) const RevenueSectionLarge() else const RevenueSectionSmall(),
+              
             ],
           ),
         ),

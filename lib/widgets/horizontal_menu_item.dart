@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/controllers.dart';
+import 'package:quiz_backoffice/constants/controllers.dart';
 import 'package:get/get.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:quiz_backoffice/constants/style.dart';
 
 import 'custom_text.dart';
 

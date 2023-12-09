@@ -1,7 +1,7 @@
 /// Bar chart example
 import 'package:charts_flutter_new/flutter.dart' as charts;
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:quiz_backoffice/constants/style.dart';
 
 class SimpleBarChart extends StatelessWidget {
   final List<charts.Series<dynamic, String>> seriesList;

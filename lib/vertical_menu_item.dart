@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/controllers.dart';
+import 'package:quiz_backoffice/constants/controllers.dart';
 import 'package:get/get.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:quiz_backoffice/constants/style.dart';
 
 import 'widgets/custom_text.dart';
 
@@ -23,7 +23,7 @@ class VertticalMenuItem extends StatelessWidget {
         child: Obx(() => Container(
               color: menuController.isHovering(itemName)
                   ? lightGrey.withOpacity(.1)
-                  : Color.fromARGB(0, 9, 180, 32),
+                  : const Color.fromARGB(0, 9, 180, 32),
               child: Row(
                 children: [
                   Visibility(

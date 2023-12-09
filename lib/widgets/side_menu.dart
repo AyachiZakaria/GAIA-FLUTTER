@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/controllers.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
-import 'package:flutter_web_dashboard/helpers/reponsiveness.dart';
-import 'package:flutter_web_dashboard/routing/routes.dart';
-import 'package:flutter_web_dashboard/widgets/custom_text.dart';
-import 'package:flutter_web_dashboard/widgets/side_menu_item.dart';
+import 'package:quiz_backoffice/constants/controllers.dart';
+import 'package:quiz_backoffice/constants/style.dart';
+import 'package:quiz_backoffice/helpers/reponsiveness.dart';
+import 'package:quiz_backoffice/routing/routes.dart';
+import 'package:quiz_backoffice/widgets/custom_text.dart';
+import 'package:quiz_backoffice/widgets/side_menu_item.dart';
 import 'package:get/get.dart';
 
 class SideMenu extends StatelessWidget {
@@ -15,7 +15,7 @@ class SideMenu extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      color: light,
+      color: const Color.fromARGB(255, 78, 114, 90), // Change the color to your desired color
       child: ListView(
         children: [
           if (ResponsiveWidget.isSmallScreen(context))

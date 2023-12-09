@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/pages/overview/widgets/info_card.dart';
+import 'package:quiz_backoffice/pages/overview/widgets/info_card.dart';
 
 
 class OverviewCardsMediumScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class OverviewCardsMediumScreen extends StatelessWidget {
         Row(
                   children: [
                     InfoCard(
-                      title: "Rides in progress",
+                      title: "Users",
                       value: "7",
                       onTap: () {},
                   topColor: Colors.orange,
@@ -26,7 +26,7 @@ class OverviewCardsMediumScreen extends StatelessWidget {
                       width: width / 64,
                     ),
                     InfoCard(
-                      title: "Packages delivered",
+                      title: "Quizzes",
                       value: "17",
                   topColor: Colors.lightGreen,
 
@@ -42,7 +42,7 @@ class OverviewCardsMediumScreen extends StatelessWidget {
                   children: [
              
                     InfoCard(
-                      title: "Cancelled delivery",
+                      title: "Quizzes with 100%",
                       value: "3",
                   topColor: Colors.redAccent,
 
@@ -52,7 +52,7 @@ class OverviewCardsMediumScreen extends StatelessWidget {
                       width: width / 64,
                     ),
                     InfoCard(
-                      title: "Scheduled deliveries",
+                      title: "Test",
                       value: "32",
                       onTap: () {},
                     ),

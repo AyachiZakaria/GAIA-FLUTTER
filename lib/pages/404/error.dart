@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/widgets/custom_text.dart';
+import 'package:quiz_backoffice/widgets/custom_text.dart';
 
 class PageNotFound extends StatelessWidget {
   const PageNotFound({super.key});

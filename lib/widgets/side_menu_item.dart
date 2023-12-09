@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/helpers/reponsiveness.dart';
-import 'package:flutter_web_dashboard/widgets/horizontal_menu_item.dart';
-import 'package:flutter_web_dashboard/vertical_menu_item.dart';
+import 'package:quiz_backoffice/helpers/reponsiveness.dart';
+import 'package:quiz_backoffice/widgets/horizontal_menu_item.dart';
+import 'package:quiz_backoffice/vertical_menu_item.dart';
 
 class SideMenuItem extends StatelessWidget {
   final String itemName;

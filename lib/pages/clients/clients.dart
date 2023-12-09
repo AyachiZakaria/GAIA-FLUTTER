@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/controllers.dart';
-import 'package:flutter_web_dashboard/helpers/reponsiveness.dart';
-import 'package:flutter_web_dashboard/pages/clients/widgets/clients_table.dart';
-import 'package:flutter_web_dashboard/widgets/custom_text.dart';
+import 'package:quiz_backoffice/constants/controllers.dart';
+import 'package:quiz_backoffice/helpers/reponsiveness.dart';
+import 'package:quiz_backoffice/pages/clients/widgets/clients_table.dart';
+import 'package:quiz_backoffice/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
 class ClientsPage extends StatelessWidget {

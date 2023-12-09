@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_dashboard/constants/style.dart';
+import 'package:quiz_backoffice/constants/style.dart';
 
 class RevenueInfo extends StatelessWidget {
   final String? title;
@@ -17,7 +17,7 @@ class RevenueInfo extends StatelessWidget {
                 text: "$title \n\n",
                 style: const TextStyle(color: lightGrey, fontSize: 16)),
             TextSpan(
-                text: "\$ $amount",
+                text: "\ $amount",
                 style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
           ])),
     );
