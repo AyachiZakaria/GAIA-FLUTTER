@@ -10,7 +10,7 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case overviewPageRoute:
       return _getPageRoute(const OverviewPage());
     case quizsPageRoute:
-      return _getPageRoute(const QuizDetailPage());
+      return _getPageRoute(QuizDetailPage());
     case clientsPageRoute:
       return _getPageRoute(const ClientsPage());
     default:

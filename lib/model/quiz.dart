@@ -1,10 +1,10 @@
 class Quiz {
-  final String? id;
-  final String? category;
-  final String? type;
-  final String? difficulty;
-  final String? question;
-  final String? correctAnswer;
+  final String id;
+  final String category;
+  final String type;
+  final String difficulty;
+  final String question;
+  final String correctAnswer;
   final List<String> incorrectAnswers;
 
   Quiz({
@@ -19,12 +19,12 @@ class Quiz {
 
   factory Quiz.fromJson(Map<String, dynamic> json) {
     return Quiz(
-      id: json['id']?? '0',
-      category: json['category']?? 'category_default',
-      type: json['type']?? 'type_default',
-      difficulty: json['difficulty']?? 'diff_default',
-      question: json['question']?? 'question_default',
-      correctAnswer: json['correct_answer']?? 'answer_default',
+      id: json['id'],
+      category: json['category'],
+      type: json['type'],
+      difficulty: json['difficulty'],
+      question: json['question'],
+      correctAnswer: json['correct_answer'],
       incorrectAnswers: List<String>.from(json['incorrect_answers']),
     );
   }
