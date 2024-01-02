@@ -5,16 +5,16 @@ import 'package:quiz_backoffice/api/quizapi.dart';
 import 'package:quiz_backoffice/model/quiz.dart';
 import 'package:quiz_backoffice/pages/quiz/widgets/quiz_detail.dart';
 
-class QuizTable extends StatefulWidget {
+class QuizHiddenTable extends StatefulWidget {
   final List<Quiz> quizzes;
 
-  const QuizTable({Key? key, required this.quizzes}) : super(key: key);
+  const QuizHiddenTable({Key? key, required this.quizzes}) : super(key: key);
 
   @override
-  _QuizTableState createState() => _QuizTableState();
+  _QuizHiddenTableState createState() => _QuizHiddenTableState();
 }
 
-class _QuizTableState extends State<QuizTable> {
+class _QuizHiddenTableState extends State<QuizHiddenTable> {
   String selectedDifficulty = 'All';
   final ApiService quizApi = ApiService();
   String searchQuery = '';
@@ -45,7 +45,7 @@ class _QuizTableState extends State<QuizTable> {
                 width: 10,
               ),
               CustomText(
-                text: "Quiz Data",
+                text: "Hidden Quiz Data",
                 color: lightGrey,
                 weight: FontWeight.bold,
                 size: 20,

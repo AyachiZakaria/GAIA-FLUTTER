@@ -18,8 +18,6 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -42,9 +40,22 @@ class MyApp extends StatelessWidget {
           TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
           TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
         }),
-        primarySwatch: Colors.blue,
+        primarySwatch: MaterialColor(
+          Color.fromRGBO(78, 114, 90, 1).value,
+          <int, Color>{
+            50: Color.fromRGBO(78, 114, 90, 1),
+            100: Color.fromRGBO(78, 114, 90, 1),
+            200: Color.fromRGBO(78, 114, 90, 1),
+            300: Color.fromRGBO(78, 114, 90, 1),
+            400: Color.fromRGBO(78, 114, 90, 1),
+            500: Color.fromRGBO(78, 114, 90, 1),
+            600: Color.fromRGBO(78, 114, 90, 1),
+            700: Color.fromRGBO(78, 114, 90, 1),
+            800: Color.fromRGBO(78, 114, 90, 1),
+            900: Color.fromRGBO(78, 114, 90, 1),
+          },
+        ),
       ),
-      // home: AuthenticationPage(),
     );
   }
 }
